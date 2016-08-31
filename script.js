@@ -82,3 +82,40 @@ $(document).ready(function () {
         });
     });
 });
+
+
+
+/* Rohan */
+var selected;
+
+$(document).ready(
+    function()
+    {
+    
+    $(".meralund").bind(    "click",  function(){ leftieclickhandler.call(this); }    );
+        
+    $(window).on('resize', function() {
+            if($(window).width() > 800) {
+                $(".field").css("display","block");
+                $(".icon").css("width","12%");
+                $(".selector").css("width","10%");
+            }else{
+                $(".field").css("display","none");
+                $(".icon").css("width","30%");
+                $(".selector").css("width","10%");
+            }
+        });
+        
+    }
+
+);
+
+
+function leftieclickhandler()
+{
+    $(selected).find(".iconsel").css("opacity","0");
+    selected=this;
+    $(this).find(".iconsel").css("opacity","0.6");
+    console.log(this);
+}
+/* Rohan */
